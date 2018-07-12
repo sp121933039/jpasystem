@@ -19,7 +19,7 @@ public class HelloWorldController {
         user.setUserName("sunpeng");
         System.out.println(user.getUserName());
 //        发送邮件
-        mailService.sendSimpleMail("121933039@qq.com","测试"," 测试邮件功能");
+        mailService.sendSimpleMail("18640580605@163.com","测试"," 测试邮件功能");
         return "hello world";
     }
 
