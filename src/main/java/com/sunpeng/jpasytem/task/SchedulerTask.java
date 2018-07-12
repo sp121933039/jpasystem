@@ -11,7 +11,7 @@ public class SchedulerTask {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(cron="*/6 * * * * ?")
+    @Scheduled(cron="0 0/1 * * * ?")
     private void process(){
         System.out.println(dateFormat.format(new Date()));
 
