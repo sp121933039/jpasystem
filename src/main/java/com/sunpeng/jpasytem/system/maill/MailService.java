@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.maill;
+package com.sunpeng.jpasytem.system.maill;
 
 public interface MailService {
 

@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.task;
+package com.sunpeng.jpasytem.system.task;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
