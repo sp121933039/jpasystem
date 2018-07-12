@@ -1,6 +1,6 @@
-package com.sunpeng.jpasytem.maill.impl;
+package com.sunpeng.jpasytem.system.maill.impl;
 
-import com.sunpeng.jpasytem.maill.MailService;
+import com.sunpeng.jpasytem.system.maill.MailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
