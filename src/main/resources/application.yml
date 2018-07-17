@@ -33,7 +33,7 @@ spring:
     database: mysql
     properties:
       hibernate:
-        dialect : org.hibernate.dialect.MySQL5Dialect
+        dialect : com.sunpeng.jpasytem.config.MySQL5DialectUTF8
     open-in-view: true
 
 
