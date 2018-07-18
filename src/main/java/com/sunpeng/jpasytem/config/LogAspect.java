@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(public * com.sunpeng.jpasytem.*.*(..))")
+    @Pointcut("execution(public * com.sunpeng.jpasytem.*.*.*(..))")
     public void printLog(){
     }
 
