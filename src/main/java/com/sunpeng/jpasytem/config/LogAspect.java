@@ -1,19 +1,18 @@
 package com.sunpeng.jpasytem.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 
 @Aspect
 @Component
+@Slf4j
 public class LogAspect {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Pointcut("execution(public * com.sunpeng.jpasytem.*.*.*(..))")
     public void printLog(){
@@ -22,7 +21,7 @@ public class LogAspect {
     @Before("printLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
 
-        logger.info("Method : " +joinPoint.getSignature());
+        log.info("Method : " +joinPoint.getSignature());
     }
 
 }

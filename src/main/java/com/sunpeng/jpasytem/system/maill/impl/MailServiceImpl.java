@@ -1,6 +1,7 @@
 package com.sunpeng.jpasytem.system.maill.impl;
 
 import com.sunpeng.jpasytem.system.maill.MailService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +11,10 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class MailServiceImpl implements MailService {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Autowired
     private JavaMailSender mailSender;
@@ -30,9 +32,9 @@ public class MailServiceImpl implements MailService {
 
         try {
             mailSender.send(message);
-            logger.info("邮件已经发送。");
+            log.info("邮件已经发送。");
         } catch (Exception e) {
-            logger.error("发送邮件时发生异常！", e);
+            log.error("发送邮件时发生异常！", e);
         }
 
     }
