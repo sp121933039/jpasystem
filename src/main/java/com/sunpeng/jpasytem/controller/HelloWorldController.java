@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.Callable;
+
 @RestController
 @Slf4j
 public class HelloWorldController {
@@ -20,11 +22,25 @@ public class HelloWorldController {
     private IHellloService hellloService;
 
     @RequestMapping("/hello")
-    public String hello(){
+    public Callable<String> hello(){
 //        发送邮件
 //        mailService.sendSimpleMail("18640580605@163.com","测试"," 测试邮件功能");
-        log.info("hello方法");
-        return hellloService.hello();
+            log.info("主线程开始");
+         Callable result = new Callable() {
+             @Override
+             public Object call() throws Exception {
+                 log.info("副线程开始");
+                 Thread.sleep(2000);
+                 log.info("副线程结束");
+                 return hellloService.hello();
+             }
+         };
+        log.info("主线程结束");
+
+
+
+
+        return result;
     }
 
 
