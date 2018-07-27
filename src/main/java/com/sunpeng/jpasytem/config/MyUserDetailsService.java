@@ -1,5 +1,6 @@
 package com.sunpeng.jpasytem.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -10,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
@@ -18,6 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        log.info("登陆验证");
        String password =  passwordEncoder.encode("123456");
         System.out.println(password);
         return new User(username,password,
