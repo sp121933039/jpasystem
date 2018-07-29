@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.config;
+package com.sunpeng.jpasytem.config.jpa;
 
 import org.hibernate.dialect.MySQL5InnoDBDialect;
 

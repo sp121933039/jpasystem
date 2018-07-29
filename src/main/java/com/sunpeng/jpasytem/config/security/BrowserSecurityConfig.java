@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.config;
+package com.sunpeng.jpasytem.config.security;
 
 
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.config;
+package com.sunpeng.jpasytem.config.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;

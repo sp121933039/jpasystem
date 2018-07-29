@@ -1,4 +1,4 @@
-package com.sunpeng.jpasytem.config;
+package com.sunpeng.jpasytem.config.durid;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
