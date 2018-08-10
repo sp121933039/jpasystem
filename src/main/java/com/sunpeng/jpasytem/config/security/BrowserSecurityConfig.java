@@ -26,12 +26,12 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         log.info("初始化 spring security 配置");
 //        super.configure(http);
-//        http.httpBasic()
-        http.formLogin()
-                .and()
-                .authorizeRequests()
-                .anyRequest()
-                .authenticated();
+        http.httpBasic().disable();
+//        http.formLogin()
+//                .and()
+//                .authorizeRequests()
+//                .anyRequest()
+//                .authenticated();
     }
 
     @Override
