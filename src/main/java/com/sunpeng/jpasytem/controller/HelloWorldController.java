@@ -3,8 +3,10 @@ package com.sunpeng.jpasytem.controller;
 
 import com.sunpeng.jpasytem.service.IHellloService;
 import com.sunpeng.jpasytem.system.maill.MailService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +23,8 @@ public class HelloWorldController {
     @Autowired
     private IHellloService hellloService;
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
+    @ApiOperation(value = "测试方法 hello")
     public Callable<String> hello(){
 //        发送邮件
 //        mailService.sendSimpleMail("18640580605@163.com","测试"," 测试邮件功能");
