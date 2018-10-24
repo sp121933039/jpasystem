@@ -52,4 +52,6 @@ spring:
 mail:
   fromMail:
     addr: *****
+logging:
+  config: classpath:logging-config.xml
 
