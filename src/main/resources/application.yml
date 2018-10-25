@@ -7,6 +7,11 @@ server:
 
 
 spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: log
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/website
     username: myuser
