@@ -6,6 +6,7 @@ import com.sunpeng.jpasytem.system.maill.MailService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,9 @@ public class HelloWorldController {
 
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @Autowired
     private IHellloService hellloService;
@@ -39,6 +43,7 @@ public class HelloWorldController {
              }
          };
         log.info("主线程结束");
+        redisTemplate.opsForValue().set("test:set","testValue1");
 
 
 
