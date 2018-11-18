@@ -17,7 +17,7 @@ public class MongoDBAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
         if (mongoTemplate != null) {
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             final BasicDBObject doc = new BasicDBObject();
-            doc.append("data", df.format(new Date()));
+            doc.append("date", df.format(new Date()));
             doc.append("level", eventObject.getLevel().toString());
             doc.append("logger", eventObject.getLoggerName());
             doc.append("thread", eventObject.getThreadName());
