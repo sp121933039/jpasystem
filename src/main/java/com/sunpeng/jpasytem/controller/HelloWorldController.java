@@ -18,14 +18,17 @@ import java.util.concurrent.Callable;
 public class HelloWorldController {
 
 
-    @Autowired
-    private MailService mailService;
+
+    private final MailService mailService;
+    private final RedisTemplate redisTemplate;
+    private final IHellloService hellloService;
 
     @Autowired
-    private RedisTemplate redisTemplate;
-
-    @Autowired
-    private IHellloService hellloService;
+    public HelloWorldController(MailService mailService, RedisTemplate redisTemplate, IHellloService hellloService) {
+        this.mailService = mailService;
+        this.redisTemplate = redisTemplate;
+        this.hellloService = hellloService;
+    }
 
     @GetMapping("/hello")
     @ApiOperation(value = "测试方法 hello")
