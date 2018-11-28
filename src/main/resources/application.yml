@@ -9,7 +9,7 @@ server:
 spring:
   data:
     mongodb:
-      host: 127.0.0.1
+      host: 45.62.98.76
       port: 27017
       database: log
   redis:
@@ -61,7 +61,7 @@ spring:
     #用户名
     username: 121933039@qq.com
     #密码
-    password: ********
+    password: 123456
     #编码
     default-encoding: UTF-8
 
